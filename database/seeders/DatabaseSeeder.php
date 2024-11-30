@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             ->create([
                 'name' => 'Rémi Meullemeestre',
                 'email' => 'remi@hotmail.com',
+                'password' => '0000',
             ]);
 
         Conference::factory()->count(5)->create();
