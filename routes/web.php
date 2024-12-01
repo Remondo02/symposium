@@ -17,9 +17,12 @@ Route::middleware('auth')->group(function () {
     Route::patch('profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('talks/{talk}', [TalkController::class, 'show'])->name('talks.show');
-    Route::get('talks', [TalkController::class, 'index'])->name('talks.index');
     Route::get('talks/create', [TalkController::class, 'create'])->name('talks.create');
+    Route::get('talks/{talk}', [TalkController::class, 'show'])->name('talks.show');
+    Route::patch('talks/{talk}', [TalkController::class, 'update'])->name('talks.update');
+    Route::get('talks/{talk}/edit', [TalkController::class, 'edit'])->name('talks.edit');
+    Route::delete('talks/{talk}', [TalkController::class, 'destroy'])->name('talks.destroy');
+    Route::get('talks', [TalkController::class, 'index'])->name('talks.index');
     Route::post('talks/create', [TalkController::class, 'store'])->name('talks.store');
 });
 
