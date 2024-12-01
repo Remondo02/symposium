@@ -19,8 +19,8 @@ class DatabaseSeeder extends Seeder
             ->has(Talk::factory()->count(5))
             ->create([
                 'name' => 'Rémi Meullemeestre',
-                'email' => 'remi@hotmail.com',
-                'password' => '0000',
+                'email' => 'remi+default@hotmail.com',
+                // 'password' => '0000',
             ]);
 
         Conference::factory()->count(5)->create();
